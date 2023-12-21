@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            width: 400px;
+            height: 1000px;
+            margin: auto;
+            position: relative;
+        }
+
+        .item {
+            display: inline-block;
+            width: 100px;
+            padding: 4px;
+            height: 100px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+
+        #box-1{
+            background-color: aquamarine;
+            /* position: relative; positions elements with relative to it's original position */
+            position: relative;
+            top: 23px;
+        }
+        #box-2{
+            background-color: crimson;
+            /* position: absolute; positions elements with relative to it's parent. The position of that parent must be anything other than static.*/
+            position: absolute;
+            top: 4px;
+            left: 50px;
+        }
+        #box-3{
+            background-color: navy;
+            color: white;
+        }
+
+        #box-4{
+            background-color: yellow;
+            color: black;
+            /* position: sticky; sticks the element to the defined place when scrolled */
+            position: sticky;
+            top: 0px;
+        }
+
+        #box-5{
+            background-color: limegreen;
+            color: black;
+            /* position: fixed; fixes the element to the defined place */
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>Positioning</h1>
+
+    <div class="container">
+        <div class="item" id="box-1">Box 1</div>
+        <div class="item" id="box-2">Box 2</div>
+        <div class="item" id="box-3">Box 3</div>
+        <div class="item" id="box-4">Box 4</div>
+        <div class="item" id="box-5">Chat with us</div>
+    </div>
+</body>
+</html>
