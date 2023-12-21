@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animations</title>
+</head>
+<style>
+    .container{
+        background-color: lime;
+        height: 300px;
+    }
+
+    .item {
+        background-color: blue;
+        width: 100px;
+        height: 300px;
+
+        
+        /* animation-name: yeshAnim;
+        animation-direction:reverse;
+        animation-fill-mode: forwards;
+        animation-duration: 3s;
+        animation-timing-function: ease-in;
+        animation-iteration-count: 2; */
+
+        /* Shorthand form */
+        /* animation: yeshAnim 3s ease-in infinite forwards; */
+        animation: yeshAnimColorChange 3s ease-in 1 forwards;
+        animation: yeshAnimColorChange 3s linear 1 forwards;
+    }
+    @keyframes yeshAnim {
+        from {
+            width: 0%;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes yeshAnimColorChange {
+        0% {
+            background-color: blue;
+            width: 0%;
+        }
+
+        25%{
+            background-color: blueviolet;
+            width: 25%;
+        }
+
+        75% {
+            background-color: darkgreen;
+            width: 75%;
+        }
+
+        100% {
+            background-color: brown;
+            width: 100%;
+        }
+    }
+    
+    
+</style>
+<body>
+    <h1>Animations</h1>
+
+    <div class="container">
+        <div class="item" id="box">
+
+        </div>
+    </div>
+</body>
+</html>
