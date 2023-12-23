@@ -38,7 +38,11 @@
 
     header::before{
         content: "";
-        background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center;
+        /* background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center; */
+        /* background-size: cover; */
+
+        /* center/cover as given below is a short-hand notation of the above two CSS properties. */
+        background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center/cover;
         position: absolute;
         top: 0;
         left: 0;
@@ -46,7 +50,6 @@
         height: 100%;
         z-index: -1;
         opacity: 0.3;
-        background-size: cover;
     }
 
     .banner {
