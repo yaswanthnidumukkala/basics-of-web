@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Background image Problem solved</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+    }
+    .menu {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+    }
+    .nav-item {
+        margin: 10px;
+        padding: 10px;
+        font-size: larger;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: black;
+        color: white;
+    }
+
+    /* Applying background here will apply the background only to header. */
+    /* header {
+        background: url("https://images.unsplash.com/photo-1529567186287-3e17bdefa342?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center;
+    } */
+
+    header::before{
+        content: "";
+        background: url('https://source.unsplash.com/collection/190727/1600x900') no-repeat center center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.3;
+        background-size: cover;
+    }
+
+    .banner {
+        margin: 0px 10px;
+        padding: 56px;
+        font-size: x-large;
+        color: white;
+    }
+    section::before{
+        content: "Text before section";
+        color: blueviolet;
+    }
+
+    section::after{
+        content: "Text after section";
+        color: blueviolet;
+    }
+    
+</style>
+<body>
+    <!-- These are two ways we can display a background. But we have a problem of displaying the text legible when we have a background. -->
+    <div class="background-image"></div>
+    <!-- <img class="background-image" src="https://images.unsplash.com/photo-1529567186287-3e17bdefa342?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
+    <header>
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="nav-item" id="item1">Home</li>
+                <li class="nav-item" id="item2">About us</li>
+                <li class="nav-item" id="item3">Contact</li>
+                <li class="nav-item" id="item4">Services</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="banner">
+            <p>Before (::before) and After (::after) pseudo selectors are used to insert content <strong>Before</strong> or <strong>After</strong> the <strong>contents</strong> of the element. Styles applied to the section will be automatically applied to these <em>Before/after</em> sections as well. You can further add more styles for these before and after sections.</p>
+            <p><a style="color: white;" href="./BackgroundWithProblem.html">This</a> is another way to add background without before/after.</p>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
