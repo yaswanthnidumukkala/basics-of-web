@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto">
+    <title>Background image without Pseudo selectors</title>
+</head>
+<style>
+    *{
+        margin: 0px;
+        font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
+    }
+    .menu {
+        list-style: none;
+        padding: 0px;
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+    }
+    .nav-item {
+        margin: 10px;
+        padding: 10px;
+        font-size: larger;
+    }
+
+    .banner {
+        margin: 0px 10px;
+        padding: 56px;
+    }
+
+    .background-image {
+        /* background-image: url("https://images.unsplash.com/photo-1529567186287-3e17bdefa342?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+        /* position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.5;
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover; */
+    }
+
+    div.background-image {
+        background: url("https://images.unsplash.com/photo-1529567186287-3e17bdefa342?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center center;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: -1;
+        opacity: 0.4;
+        height: 100vh;
+        width: 100vw;
+        object-fit: cover;
+    }
+
+    .banner {
+        font-size: xx-large;
+        color: white;
+    }
+    
+</style>
+<body>
+    <div class="background-image"></div>
+    <!-- <img class="background-image" src="https://images.unsplash.com/photo-1529567186287-3e17bdefa342?q=80&w=1972&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> -->
+    <header>
+        <nav class="navigation">
+            <ul class="menu">
+                <li class="nav-item" id="item1">Home</li>
+                <li class="nav-item" id="item2">About us</li>
+                <li class="nav-item" id="item3">Contact</li>
+                <li class="nav-item" id="item4">Services</li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="banner">
+            <p style="text-align: center; color: black;">We tried to reduce the opacity of background. But the entire text is dimmed. This is a problem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem suscipit laudantium, tenetur non porro quod accusantium tempora. Earum unde molestias repellendus temporibus provident, esse nostrum exercitationem assumenda nesciunt aut nobis quia cum error dolor voluptatum.</p>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
