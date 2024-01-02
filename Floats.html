@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Float and clear</title>
+</head>
+
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    .container{
+        border: 2px solid purple;
+        width: 800px;
+
+        /* This property distributes margin equally to the left/right of the element. WIDTH IS MUST FOR THIS TO WORK.  */
+        margin: auto;
+    }
+
+    .box{
+        border: 2px solid black;
+        background-color: azure;
+        padding: 5px;
+        margin: 10px;
+    }
+
+    #box-1{
+        float: left;
+        width: 47%;
+    }
+    #box-2{
+        float: left;
+        width: 47%;
+    }
+    #box-3{
+        /* float: left; */
+        width: 100%;
+
+        /* Used to stop other elements using floats from overlapping */
+        clear: both;
+    }
+</style>
+<body>
+    <h1>Float and clear</h1>
+    <h3>Float: Used to float elements to left/right in a container</h3>
+    <h3>Clear: Should be given to other elements in the container which does not want to get overlapped with other float elements in the container.</h3>
+    <div class="container">
+        <div class="box" id="box-1">
+            <h1>Fruits</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem omnis suscipit iure ut repellat explicabo illo repellendus tenetur eaque, distinctio, sapiente soluta, necessitatibus nisi illum aperiam alias unde nihil eligendi? Sint consequuntur impedit accusamus quos debitis placeat quisquam dolorum assumenda, quo soluta praesentium distinctio ratione molestias tempore quas ut illum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus, soluta cupiditate. Debitis a, velit corrupti temporibus nihil porro libero voluptatum blanditiis, sint fugit, tempore ipsam unde assumenda alias itaque! Error odio, reiciendis perspiciatis consequuntur aspernatur molestiae ipsam nihil repudiandae libero!
+            </p>
+        </div>
+        <div class="box" id="box-2">
+            <h1>Stationary</h1>
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae enim accusantium minima nesciunt voluptate vitae voluptatibus unde. Ex eos itaque consequatur! Quisquam, recusandae? Porro aut rem labore ad nihil facere debitis suscipit, voluptatum, illum deserunt unde? Ad ullam corporis nisi distinctio aut quam, maiores sit. Dignissimos nostrum eum a esse? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reprehenderit et fugiat unde amet voluptas ullam blanditiis fugit dolorum, error alias? Repudiandae quam quos numquam molestiae repellendus, possimus fugit odit eos voluptas. Corporis blanditiis dolores eligendi. Libero beatae ipsa vitae?
+            </p>
+        </div>
+        <div class="box" id="box-3">
+            <h1>Computers</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quae dicta nihil ratione, error maiores voluptas natus, excepturi quas voluptates nam molestiae tempore officia ad dolorum! Dolor, et dignissimos distinctio debitis eum tenetur? Corrupti distinctio eius iure aperiam quas incidunt, provident dolores, necessitatibus molestiae facilis et fugiat. Sequi, alias maiores?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
