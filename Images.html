@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images in CSS</title>
+
+    <style>
+        .img-cntr{
+            border: 2px solid black;
+            width: 300px;
+            height: 300px;
+            margin: 5px 0px;
+        }
+        .img1{
+            height: 200px;
+            width: 200px;
+            
+            /* Adjusts image to cover the height and width of img element. NOT THE DIV 
+            cover --> Tries to show the image to fit to the height and without without losing aspect ratio.
+            */
+            object-fit: cover;
+        }
+
+        .img2{
+            height: 200px;
+            width: 200px;
+            
+            /* Adjusts image to contain the image in the specified height and width of img element.
+            contain the image --> tries to show the image without hampering the aspect ratio. But leaves gap.
+             */
+            object-fit: contain;
+            
+            /* Used to position the element */
+            object-position: 10px 20px;
+        }
+
+        .img3{
+            /* Background image url */
+            background-image: url("https://i.pinimg.com/736x/ed/78/11/ed78116c19573356cd2519cf1f4e73d7.jpg");
+            
+            /* Used to show which part of image to display. And to adjust the position. */
+            background-position: bottom right;
+
+            /* Whether to repeat the image or not. no-repeat will not repeat the image. repeat-x will repeat on x-axis. repeat-y will repeat on y axis. */
+            background-repeat: no-repeat;
+
+            /* Contain/Cover the image */
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="img-cntr">
+        <img class="img1" src="https://i.pinimg.com/736x/ed/78/11/ed78116c19573356cd2519cf1f4e73d7.jpg" alt="">
+
+        <h4>Object fit cover</h4>
+    </div>
+    <div class="img-cntr">
+        <img class="img2" src="https://i.pinimg.com/736x/ed/78/11/ed78116c19573356cd2519cf1f4e73d7.jpg" alt="">
+        <h4>Object fit contain</h4>
+    </div>
+    <div class="img-cntr img3">
+    </div>
+</body>
+</html>
